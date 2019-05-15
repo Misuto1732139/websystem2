@@ -3,21 +3,24 @@
 <head>
 <meta charset="UTF-8">
 </head>
-<body>
+<body<h1><%=aisatu %></h1>
     <table>
         <% for( let result of content ) { %>
         <tr>
             <td><%= result.id %></td>
             <td><%= result['都道府県'] %></td>
-            <td><%= result['人口'] %></td>
+            <td><%= result['population'] %></td>
         </tr>
         <% } %>
     </table>
     <form action="/" method="get">
         並び順：<select name="sorting">
             <option value="人口">人口</option>
-            <option value="男性">男性</option>
+            <option value="男性">男性</output>
             <option value="女性">女性</option>
+            <option value="学生数">学生数</option>
+            <option value="男子学生">男子学生</option>
+            <option value="女子学生">女子学生</option>
         </select>
         表示数：<input type="text" name="number" size="10">
         <input type="submit" value="並び替える">
