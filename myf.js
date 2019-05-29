@@ -12,7 +12,7 @@ var connection = mysql.createConnection({
 });
 
 server.get('/', function( req, res ) {
-    connection.query('select batting.id, batting.year,  batting.HR,  ,player.name from batting　inner join player on batting.player_id = player.id　limit 10;', (error, rows, fields) => {
+    connection.query('select batting.id, batting.year,  batting.HR, batting.player_id ,player.name from batting　inner join player on batting.player_id = player.id　limit 10;', (error, rows, fields) => {
         if( error ) {
             console.log('Query Error');
             
