@@ -13,9 +13,9 @@ var connection = mysql.createConnection({
 
 server.get('/', function( req, res ) {
     connection.query('select batting.id, batting.year, batting.player_id, batting.team_id, batting.HR 
-    >-from batting
-    >-inner join player on batting.player_id = player.id
-    >-limit 10;', (error, rows, fields) => {
+    ->from batting
+    ->inner join player on batting.player_id = player.id
+    ->limit 10;', (error, rows, fields) => {
         if( error ) {
             console.log('Query Error');
         }
