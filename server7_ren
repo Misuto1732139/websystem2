@@ -11,32 +11,16 @@ var connection = mysql.createConnection({
     database: 'web'
 });
 
-server.get('/', function( req, res ) {
-    connection.query('select id, 都道府県, 人口 from example order by 人口 desc limit 10;', (error, rows, fields) => {
+server.get('/HR', function( req, res ) {
+    connection.query('select batting.id, batting.year,batting.player_id,batting.team_id,batting.HR limit 10;', (error, rows, fields) => {
         if( error ) {
             console.log('Query Error');
         }
-        res.render( 'sql.ejs', { content: rows });
+        res.render( 'sql5.ejs', { content: rows });
     });
 });
 
-server.get('/test', function( req, res ) {
-    connection.query('test', (error, rows, fields) => {
-        if( error ) {
-            console.log('Query Error');
-        }
-        res.render( 'sql3.ejs', { content: rows });
-    });
-});
 
-server.get('/time', function(req,res){
-    connection.query('time', (error, rows, fields) => {
-        if( error ) {
-            console.log('Query Error');
-        }
-        res.render( 'sql4.ejs', { content: rows });
-    });
-});
 
 server.listen( 80, function() {
     console.log( 'listening on port 80' );
