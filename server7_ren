@@ -11,7 +11,7 @@ var connection = mysql.createConnection({
     database: 'web'
 });
 
-server.get('/HR', function( req, res ) {
+server.get('/', function( req, res ) {
     connection.query('select batting.id, batting.year,batting.player_id,batting.team_id,batting.HR limit 10;', (error, rows, fields) => {
         if( error ) {
             console.log('Query Error');
