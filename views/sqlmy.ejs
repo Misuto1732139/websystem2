@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang=ja>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+    <table>
+        <% for( let result of content ) { %>
+        <tr>
+            <td><%= result.batting.id %></td>
+            <td><%= result.batting.year %></td>
+            <td><%= result.playe.name %></td>
+        </tr>
+        <% } %>
+    </table>
+</body>
+</html>
