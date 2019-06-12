@@ -25,7 +25,7 @@ server.get('/', function( req, res ) {
 server.get('/players', function( req, res ) {
     let name=req.query.players||'';
     if(name.length != 0){
-       let quary='insert into (name) value ('"+name+"');"
+       let quary='insert into (name) value ('"+ name +"');";
        console.log(rows);
        res.render( 'sql5.ejs', { content: rows });
        res.render('input.ejs');
