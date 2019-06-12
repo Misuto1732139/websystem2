@@ -27,11 +27,11 @@ server.get('/players', function( req, res ) {
     if(name.length != 0){
         let quary="insert into (name) value ('"+ name +"');"
         console.log(rows);
-        res.render( 'sql5.ejs', { content: rows });
+        res.render( 'sqlmy2.ejs', { content: rows });
         res.render('input.ejs');
-    }else if{
+    }else{
         res.render('sitei.ejs');
-    });
+    }
 });
 
 
