@@ -1,6 +1,6 @@
-const GameName = require('GameName');
+
 const Fighter = require('Fighter');
-const server = GameName();
+
 const server = Fighter();
 const ejs = require('ejs');
 const mysql = require('mysql');
