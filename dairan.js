@@ -18,7 +18,7 @@ server.get('/', function( req, res ){
         if(error){
             console.log('Query Error');
         }
-        res.send('FN.js',{ content: row });
+        res.send('FN.ejs',{ content: row });
     });
 });
 
