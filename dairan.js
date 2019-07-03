@@ -1,7 +1,5 @@
-
-const Fighter = require('Fighter');
-
-const server = Fighter();
+const express = require('express');
+const server = express();
 const ejs = require('ejs');
 const mysql = require('mysql');
 
