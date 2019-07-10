@@ -12,7 +12,7 @@ var connection = mysql.createConnection({
 });
 
 server.get('/', function( req, res ){
-        res.send('mokuzi.ejs',{ title:'Express' });
+        res.status(200).send('mokuzi.ejs',{ title:'Express' });
     });
 
 
