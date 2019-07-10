@@ -12,10 +12,11 @@ var connection = mysql.createConnection({
 });
 
 server.get('/', function( req, res ){
-        res.status(200).send('mokuzi.ejs',{ title:'Express' });
-    });
+    res.status(200).send('mokuzi.ejs',{ title:'Express' });
+});
 
 
+    
 server.listen(80,function() {
     console.log('listening on port 80');
 });
