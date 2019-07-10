@@ -12,14 +12,10 @@ var connection = mysql.createConnection({
 });
 
 server.get('/', function( req, res ){
-    connection.query('select id, FighterId, FighterName ',(error,rows,fields)=>{
-        if(error){
-            console.log('Query Error');
-        }
-        res.send('FN.ejs',{ content: row });
+        res.send('mokuzi.ejs',{ title:'Express' });
     });
 });
 
 server.listen(80,function() {
-    console.log('listening on port ');
+    console.log('listening on port 80');
 });
