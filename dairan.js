@@ -27,7 +27,7 @@ server.get('/games',function( req, res ){
 });
 
 server.get('/characters',function( req, res ){
-    let query = 'select Fighter.fighter_number,Fighter.fighter_name ;';
+    let query = 'select Fighter.id,Fighter.fighter_number,Fighter.fighter_name ;';
     console.log( query );
     connection.query( query, (error, rows, fields) => {
         if( error ) {
