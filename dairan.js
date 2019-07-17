@@ -16,7 +16,7 @@ server.get('/', function( req, res ){
 });
 
 server.get('/games',function( req, res ){
-    let query = 'select Gamename.id,GameName.game_name,buy.number from GameName inner join GameName on GameName.number_id=buy.id order by GameName.id ;';
+    let query = 'select Gamename.id,GameName.game_name,buy.number from GameName inner join GameName on GameName.number_id=buy.id  ;';
     console.log( query );
     connection.query( query, (error, rows, fields) => {
         if( error ) {
@@ -27,7 +27,7 @@ server.get('/games',function( req, res ){
 });
 
 server.get('/characters',function( req, res ){
-    let query = 'select Fighter.id,Fighter.fighter_number,Fighter.fighter_name from Fighter order by Fighter.id;';
+    let query = 'select Fighter.id,Fighter.fighter_number,Fighter.fighter_name from Fighter;';
     console.log( query );
     connection.query( query, (error, rows, fields) => {
         if( error ) {
