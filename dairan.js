@@ -16,7 +16,7 @@ server.get('/', function( req, res ){
 });
 
 server.get('/games',function( req, res ){
-    let query = 'select Gamename.id,GameName.game_name,buy.number from GameName inner join GameName on GameName.number_id=buy.id  ;';
+    let query = 'select GameName.id,GameName.game_name,buy.number from GameName inner join GameName on GameName.number_id=buy.id  ;';
     console.log( query );
     connection.query( query, (error, rows, fields) => {
         if( error ) {
